@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tony Schick</title>
+    <description>journalist, etc.</description>
+    <link>http://anthonyschick.com/</link>
+    <atom:link href="http://anthonyschick.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 02 Aug 2014 20:32:03 -0700</pubDate>
+    <lastBuildDate>Sat, 02 Aug 2014 20:32:03 -0700</lastBuildDate>
+    <generator>Jekyll v2.2.0</generator>
+    
+      <item>
+        <title>Creating and mapping a rate to compare to the federal poverty measure</title>
+        <description>&lt;p&gt;One of the main tasks within a project I’ve been working that I’ve dubbed “Poorly Defined” – a year-long writing fellowship covering poverty funded by the Missouri School of Journalism – is using data that’s compiled on “living wages” to create a rate that can be compared to the official poverty rate. Most people look at the official poverty thresholds, which haven’t been updated in nearly 50 years, and struggle to understand how a single person could get by on $TK, let alone how a single parent of 3 could get by on $TK in New York City (For a great simplified explanation of this, check out this brief story from a recent episode of NPR’s Planet Money).&lt;/p&gt;
+
+&lt;p&gt;In recent years, nonprofit groups, sociologists and economists have been developing new thresholds that better estimate the cost of living in the U.S., that include work-related expenses and child care, and that – perhaps most significantly – adjust for geographic differences in cost of living. Efforts include the Self-Sufficiency Standard from researchers at the University of Washington, the Family Budget Calculator from the Economic Policy Institute, Basic Economic Security Tables from Wider Opportunities for Women and The Living Wage Calculator from the Massachusetts Institute of Technology.&lt;/p&gt;
+
+&lt;p&gt;My aim, which I’d included in my original pitch to the University of Missouri more than a year ago (I began work on the project at the start of the year, after I officially graduated), and later included in a pitch to The Investigative Fund of the Nation Institute, was to use one of these well-established thresholds to create a rate we could compare to the poverty rate, both nationally and for different locations. Our first charge was to figure out which measure to use. All of them are fairly similar, but we needed to decide which one we would rely on.&lt;/p&gt;
+
+&lt;p&gt;The Self-Sufficiency Standard, created by Diana Pearce, has been around the longest and is the most detailed, as it’s calculated for more than 60 family types. But, it’s calculated on a per contract basis, so it’s only been created for about 37 states, and many of those standards are several years out of date. The Basic Family Budget Calculator has been calculated for far fewer family types and presents similar geographic challenges. We ultimately decided on the Living Wage Calculator: It comes from MIT, a trusted institution, has a published methodology, was updated within the past year, has been widely cited and has stood up to scrutiny, and has been calculated for every county in the U.S., meaning we could do a fairly detailed and consistent analysis across the country.&lt;/p&gt;
+
+&lt;p&gt;So we had our threshold – half of the equation for calculating a poverty rate – and it was created for us. The other half we needed was a population’s worth of income data, and we needed real families’ incomes so that we could apply the right threshold to each one. So we turned to the Public Use Microdata Sample (PUMS). PUMS is a sample of actual responses, not aggregate statistics, within the Census Bureau’s American Community Survey. It’s a trove of information that can be used to determine things like what former Oregonians are doing in Missouri or how many public school teachers send their kids to private school.&lt;/p&gt;
+
+&lt;p&gt;To get the dataset we needed, I had to code the families in PUMS into the 8 family types created in the Living Wage Calculator (having only 8 family types, this somewhat underestimates the cost of living for families with more than 3 children, though the threshold is still much higher than the official poverty line).&lt;/p&gt;
+
+&lt;p&gt;This required some judgment calls, though. What constitutes a family and what doesn’t? The official poverty measure has a fairly traditional definition: If you’re an unmarried partner, roommate or non-immediate family member, you’re an individual unit, separate from the family you might live with. Parsing the families this way was one option. The other was assuming that all members of a household, regardless of relationship, share resources to some degree rather than not at all. I decided to try coding it both ways and realized the difference was negligible, smaller than the margin of error for each sample, and choosing one over the other would not have an impact on the analysis. I ultimately went with all members of a household.&lt;/p&gt;
+
+&lt;p&gt;Determining household type required knowing the number of adults and children in each household. The official measure differentiates between individuals above and below age 18. Because the Living Wage Calculator includes child care as a not insignificant cost, that differentiation makes little sense. I decided to consider any household member age 14 or above and without a self-care disability to be an adult (PUMS has fields listing whether an individual has certain disabilities). This prevented us from applying child care costs to households without individuals requiring child care .As I went about making these decisions, I spoke with analysts from other projects such as the Self-Sufficiency Standard and red technical papers and spoke with representatives from the Census Bureau.&lt;/p&gt;
+
+&lt;p&gt;But PUMS presented another challenge. Its main limitation is geography. For privacy purposes, and to keep the records anonymous, the smallest geography the data are available in is called a Public Use Microdata Area (PUMA). These are designed to to include at least 100,000 people and thus are in some cases smaller than counties and in some cases are much larger. But the areas within each PUMA tend to be demographically and economically similar, but of course there is some variation.&lt;/p&gt;
+
+&lt;p&gt;So how did we reconcile county-level thresholds with PUMA-level incomes? We turned to John Blodgett of the Missouri Census Data Center, the University of Missouri organization that created a geographic conversion tool. As it turns out, arguably the country’s leading expert on conversions between these boundaries worked on the same university campus I did. Blodgett walked a colleague of mine and me through how take weighted averages of the county thresholds and disperse them to the PUMAs. So what we ended up with were PUMA-level thresholds based on averages from the counties, which gave us an accurate and defensible representation.&lt;/p&gt;
+
+&lt;p&gt;Once we had both the incomes and the thresholds, it was simple math and crosstabs (I used SPSS software) to determine whether a household was above or below the living wage line and ultimately to determine the rate for each PUMA.&lt;/p&gt;
+
+&lt;p&gt;Getting those calculations was a triumphant moment, but I soon realized it didn’t mean anything. I don’t know where or what area 0100200 is (well, actually by now I know it’s somewhere around Autauga County, Alabama, but you get the point). So to actually make sense of the calculations, I had to either a) convert it back to counties or b) map it. I figured if we could take the county data and convert it to PUMAs, then why couldn’t we do the reverse and go back again? So I did that and made a stupid mistake. Doing that showed Oconee County, Georgia with the highest difference between the poverty rate and the below-living-wage rate. So by some measure, that means Oconee County has the highest number of uncounted poor. Google Oconee County, and you’ll realize that doesn’t make sense, as it’s one of the most prosperous counties in Georgia. What happened? Well, Oconee County has a relatively low poverty rate but it surrounded by poorer counties. None of them are densely populated, so they are grouped into one PUMA with a relatively high rate of people below the living wage threshold. When I converted it back to counties, Oconee was assigned that high rate, which wasn’t an accurate representation of it.&lt;/p&gt;
+
+&lt;p&gt;So, that wasn’t going to work. Mapping, then, was the best way to understand the data. Using Quantum GIS, TileMill and Mapbox, I created this map, a “chloropeth” map shaded by the rate of people below the living wage threshold. You can see clusters of high disparity in urban areas like New York, Chicago, Atlanta, the San Francisco-Oakland Bay Area and Los Angeles, all of which have a newly calculated rate more than 20 percentage points higher than the official poverty rate. The next step is reviewing the map with editors to determine the best places for on-the-ground reporting.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 10 Oct 2013 05:19:00 -0700</pubDate>
+        <link>http://anthonyschick.com/jekyll/update/2013/10/10/poverty-map/</link>
+        <guid isPermaLink="true">http://anthonyschick.com/jekyll/update/2013/10/10/poverty-map/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Tracking data sources during the government shutdown</title>
+        <description>&lt;p&gt;The government has shut down. National parks, our greatest treasure, have closed. Census data, sickeningly, is considered “non-essential.”&lt;/p&gt;
+
+&lt;p&gt;Let IRE light your darkest hour.[1]&lt;/p&gt;
+
+&lt;p&gt;That was the joke intro I wrote for a short post on the IRE site, which, sadly, didn’t make it into the final version.&lt;/p&gt;
+
+&lt;p&gt;But in all seriousness, the fact that .gov sites across the web aren’t available is a problem for public information, and particularly for the journalists who use that public data to find and tell important stories. So I started a spreadsheet for IRE in an attempt to keep track of what data are available, what has been closed off and what alternative sources are available. We’re crowdsourcing it, so if you know of  a data source we should add to the list, click on this link to the spreadsheet and add it to the list.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 10 Oct 2013 05:19:00 -0700</pubDate>
+        <link>http://anthonyschick.com/jekyll/update/2013/10/10/government-shutdown/</link>
+        <guid isPermaLink="true">http://anthonyschick.com/jekyll/update/2013/10/10/government-shutdown/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Visualizing wildlife trade data</title>
+        <description>&lt;p&gt;I’ve been wanting to use wildlife trade data for a long time. Wildlife trafficking fascinates me. I’ve also been looking for a data viz project, because after seeing it in action and reading/hearing about how great the javascript library is for working with data, I’ve been eager to build something of my own with D3js.&lt;/p&gt;
+
+&lt;p&gt;Putting the two together was pretty fun. &lt;/p&gt;
+
+&lt;p&gt;What I originally (and still) wanted to do, was access the full database and build a web application that allowed users to search trades over time as well as view visualizations of trade trends, trades between countries, and traffic for each species. But I can’t do that yet, because I don’t have full access to the database (more on this below). Right now, the visualization shows live wildlife trade for 2011, the latest year available. Coming next is the addition of non-live trade such as animal parts, which is a little trickier because some of them are measured in units, some in milligrams, some in other metrics, etc. So once I clean that up and figure out how to aggregate the data given the various units of measurement, you’ll be able to see that here as well.&lt;/p&gt;
+
+&lt;p&gt;I then opted to create an initial visualization and build on it when I could. Looking through the D3 examples of different visualizations, I realized the chord diagram would be a really interesting way to analyze trade data between countries.&lt;/p&gt;
+
+&lt;p&gt;It should be noted that what I created isn’t a fully vetted journalistic piece yet. I’ve taken steps to clean the database and ensure the accuracy of the visualization, but I haven’t shown anything to CITES, nor have I fully reported out any outliers or odd trend.&lt;/p&gt;
+
+&lt;p&gt;Like all data, CITES data are dirty. First off, the trade reporting the database is based on could be incomplete and in some cases almost certainly is. Also, trade is reported by both countries, but one country’s trade report might not match up with the other’s. That can cause problems.&lt;/p&gt;
+
+&lt;p&gt;Here’s how I put it together, in boring detail:&lt;/p&gt;
+
+&lt;p&gt;The first step was accessing and understanding the data. I had some familiarity with wildlife trade data from the Convention on International Trade in Endangered Species of Wild Flora and Fauna (CITES) because about four years ago, when I was an intern at National Geographic Magazine, they were working on this investigation into Asia’s Wildlife Trade, and my editor was wrestling with the data.&lt;/p&gt;
+
+&lt;p&gt;CITES allows you to download extracts of its data, but it chokes if you try downloading all records for even a year. So getting the whole database, which dates back several decades, wasn’t going to happen (though I have asked nicely and am told by CITES representatives that they might be able to send me bigger extracts). So I knew that if I wanted to get a full year, I was going to have to find a way to download smaller extracts and sew them together. That sounds like a pain, doesn’t it? Well, thanks to a simple Python script, it wasn’t. What I did was download a single csv (comma-separated records) file for different types of trade in the database, which kept the download size within the limit. Then I wrote this basic script …&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 24 Sep 2013 05:19:00 -0700</pubDate>
+        <link>http://anthonyschick.com/jekyll/update/2013/09/24/wildlife-trade/</link>
+        <guid isPermaLink="true">http://anthonyschick.com/jekyll/update/2013/09/24/wildlife-trade/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Scraping data out of the Oregon consumer complaints database</title>
+        <description>&lt;p&gt;The Oregon Department of Justice keeps an online database of consumer complaints that is updated regularly. It’s a fantastic tool, but it’s primarily helpful if you already know what you’re looking for. You can enter search terms for companies or search by date and get descriptions of the nature of the complaint and how the department handled it.&lt;/p&gt;
+
+&lt;p&gt;It’s great public information, but it’s not in the easiest format for really understanding the data. You can only view one record at a time, and you can’t ask the online database which company has the most requests, or whether there are more requests happening than there used to be, or if one company got a slew of complaints all relating to a similar practice or incident. For that, you’d want tabular data, a spreadsheet – columns and rows.&lt;/p&gt;
+
+&lt;p&gt;Enter web scraping. Using a programming language, you can write a script to tell your computer how to go fetch the records out of that online database and spit it back to you as a spreadsheet. What a wonderful world.&lt;/p&gt;
+
+&lt;p&gt;In my case, I used the Python programming language, which I’ve been working with for the past year. Using Python, I could automatically check to see how many records are in the database and retrieve them one by one – this would take weeks of mind-numbing labor. The script took me a couple of hours to write and maybe another hour to clean out all the bugs (i.e. stuff I did wrong). It would take an expert programmer a lot less time. The scraper ran for about 42 hours while I was off doing whatever I wanted. And when it was done, I had 64,146 records in a beatiful CSV file, ready to be worked with.&lt;/p&gt;
+
+&lt;p&gt;Before:                          After:&lt;/p&gt;
+
+&lt;p&gt;Web scraping, to me, represents one example of how coding can make you a better journalist. Much is made now of news applications and data visualizations, and for good reason, but I think the emphasis on knowing how to write code for those purposes distracts from how it can make journalists better at the jobs they already do every day. Programming can automate tasks that take up reporters’ time and it can also do things that reporters could never do on their own. The ability to write a computer program doesn’t just mean cool new web tools. It means you’re a more dangerous reporter.&lt;/p&gt;
+
+&lt;p&gt;In my opinion, nobody puts this better than Ben Welsh of the Los Angeles Times Data Desk, when he talks about what he calls human-assisted reporting. View his impassioned “lightning talk” at the 2013 NICAR Conference here. Allow me to paraphrase and bastardize: Right now we treat computers like guns when we’re going after a story. The story is out there, I’m going to find it, and I’m going to target it with my gun. But as journalists we should view “computer-assisted reporting” like the little spider robots in minority report – we should write programs that constantly scour the city and deliver us stories. &lt;/p&gt;
+
+&lt;p&gt;We should also be standardizing all of our data. This doesn’t just apply to people who work with Excel or statistics. It applies to anyone whose got a mess of a MyDocuments folder with 18 versions of the same file that’s been slightly tweaked over and over again. &lt;/p&gt;
+
+&lt;p&gt;So how exactly does my lowly little scraper work? Well, you can check it out – and access the resulting file – here: https://github.com/tonyschick/odoj&lt;/p&gt;
+
+&lt;p&gt;I’ve included instructions on how to run it. If you want to run it and have trouble, email me at schick.anthony@gmail.com.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 06 Sep 2013 05:19:00 -0700</pubDate>
+        <link>http://anthonyschick.com/jekyll/update/2013/09/06/odoj-scraper/</link>
+        <guid isPermaLink="true">http://anthonyschick.com/jekyll/update/2013/09/06/odoj-scraper/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Why I&#39;m sending a FOIA to U.S. Fish and Wildlife about wolves</title>
+        <description>&lt;p&gt;I used to keep my secrets in a wolf.&lt;/p&gt;
+
+&lt;p&gt;I was young enough at the time that I can’t remember the exact age when grandma Edith – the only grandparent I’ve ever known – gave me a pair of miniature white wolves to round out the plastic menagerie I kept in a white crate at the foot of my bed.&lt;/p&gt;
+
+&lt;p&gt;Larger and cooler than the rest of the animals, as they were not of the same manufacturer, they became instant favorites. They roamed the vast green carpet.  They battled lions. G.I. Joes rode on their backs.&lt;/p&gt;
+
+&lt;p&gt;Soon they were overworked to the point that one of the wolves’ heads fell off. Horrified at first, I soon realized I could pop the wolf’s head on and off whenever I wanted. And I could slip candy, game pieces, anything I wanted inside its hollow body, toss it back into the pile of fauna and no one would be any the wiser. It was my strongbox.&lt;/p&gt;
+
+&lt;p&gt;I’ve had a fascination with wolves ever since. I went on to wear a wolf T-shirt from the Oregon Zoo for weeks at a time. When I visited Yellowstone for the first time with my dad and my brother, we went wolf watching at dawn.&lt;/p&gt;
+
+&lt;p&gt;About a decade later, wolves became heated debate throughout the West. The experimental populations planted in Idaho and Yellowstone in the late 90s began to recover, and soon the wolves were doing what wolves do best and what humans disliked enough to drive them off in the first place: roam and hunt.&lt;/p&gt;
+
+&lt;p&gt;Farmers and ranchers and were not happy. Neither were hunting outfitters. After all, their livelihoods were – and still are – at stake. I was a senior at Gonzaga University when the first wolves began crossing into Washington and the state began drafting a controversial wildlife management plan. As my capstone journalism project, I reported a lengthy (too long, and in desperate need of an editor, actually) article on the return of wolves to Washington and the many challenges they posed. It ran in a local paper but isn’t archived online. I’ve got a copy on a hard drive somewhere, and could probably dig it up if anyone really wanted to see it. &lt;/p&gt;
+
+&lt;p&gt;I haven’t done much reporting on wolves since, but I’ve paid some attention to the news, as wolves have been a nightmare for ranchers and have led to controversial hunts in Idaho and killings in Oregon. &lt;/p&gt;
+
+&lt;p&gt;I have a habit of scrolling my Twitter feed to find news I might be able to peg a FOIA request on, and the other day something caught my eye:&lt;/p&gt;
+
+&lt;p&gt;Wovles are being proposed for de-listing under the Endangered Species Act, meaning they would no longer receive federal protection but could receive state protections, and environmental and public employee groups report that leading wolf experts are being shut out of the scientific review process.&lt;/p&gt;
+
+&lt;p&gt;From PEER:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Although the peer review is supposed to be independent of FWS, the agency controls selection of the reviewers engaged by the contractor.
+
+FWS exercised that control in blocking at least three of the seven names on AMEC&#39;s list of reviewers chosen for their qualifications: Dr. Roland Kays of North Carolina State University, Dr. Jon Vucetich of Michigan Technological University and Dr. Robert Wayne of the University of California, Los Angeles. All have published extensively on the wolf and are considered preeminent experts.
+
+In an August 7th email to one of the scientists, an AMEC official stated that the FWS had vetoed his participation in the peer review even though the firm had already selected him for his qualifications.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Leading experts being omitted from the review? If true, and if it happened for the wrong reasons, that’s newsworthy. So I drafted this FOIA request:&lt;/p&gt;
+
+&lt;p&gt;Under the Freedom of Information Act, 5 U.S.C. § 552, I request copies of all records of communication, including memos, email and other correspondence between the U.S. Fish and Wildlife Service and the consulting firm AMEC regarding a scientific peer review of the plan to remove federal protections for the gray wolf, as well as all emails and correspondence within the agency and between the agency and AMEC that mention any or all of the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dr. Roland Kays of North Carolina State University&lt;/li&gt;
+  &lt;li&gt;Dr. Jon Vucetich of Michigan Technological University&lt;/li&gt;
+  &lt;li&gt;Dr. Robert Wayne of the University of California, Los Angeles &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Wolf recovery is a complex issue with many interested parties and high stakes. And I’ve never felt the perspective of having my livelihood as a rancher at stake because of wolves. They fascinate me, yes, and I am a believer in Leopold’s land ethic, but I’m no expert in this case. Nor have I ever had my livelihood threatened by a wolf pack. I cannot say I know how wolves should be managed. &lt;/p&gt;
+
+&lt;p&gt;But I can say that I believe the decision should be based in sound science, and questions abound about the U.S. Fish and Wildlife Service’s scientific review.  As far as I can tell, it’s not yet clear the true motivation of agency officials in deciding not to include these researchers. Nor do I know if the agency has a vested interest in one or another fate of wolves.&lt;/p&gt;
+
+&lt;p&gt;I figure it’s worth a FOIA request to check if they’re keeping any secrets there.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 17 Aug 2013 05:19:00 -0700</pubDate>
+        <link>http://anthonyschick.com/jekyll/update/2013/08/17/wolf-foia/</link>
+        <guid isPermaLink="true">http://anthonyschick.com/jekyll/update/2013/08/17/wolf-foia/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>How journalists can (and need to) learn safe communication, online security</title>
+        <description>&lt;p&gt;I am not an expert on encyrption tools, spycraft or strategies for online privacy. Nor have I ever had a desperate need for them while working on a story. But it’s become a reality that digital communcication through typical channels is not secure, nor private, and that should matter to journalists. The Associated Press had its phone records seized by the Department of Justice. The National Security Agency collects massive amounts of metadata on phone records and online data from major servers that everyone who is connected is connected to. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.anthonyschick.com/blog/dispatches/2013/8/14/how-journalists-can-and-need-learn-safe-communicat/%20http:/www.slate.com/blogs/business_insider/2013/08/14/gmail_security_google_says_users_have_no_legitimate_expectation_of_privacy.html&quot;&gt;And now, Slate reports&lt;/a&gt;, Google admits its gmail users have “no legitimate expectation of privacy in information he voluntarily turns over to third parties.”&lt;/p&gt;
+
+&lt;p&gt;That’s what we all have to deal with, journalists or not. But for journalists, our livelihood is at stake.&lt;/p&gt;
+
+&lt;p&gt;This means you don’t know who else sees an email to a source. Shield laws wouldn’t really matter anymore. For most stories, such practices are not necessary nor are they practical. But if and when we need to, journalists must be able to protect our sources. If journalists cannot offer whistleblowers and concerned citizens a safe and secure way to share important information, then we aren’t doing our jobs. And given the current state of digital security and surveillance, we’re going to have to work a lot harder to do that.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;ved=0CDEQqQIwAA&amp;amp;url=http%3A%2F%2Fwww.nytimes.com%2F2013%2F08%2F18%2Fmagazine%2Flaura-poitras-snowden.html%3Fpagewanted%3Dall&amp;amp;ei=C7ILUvOYD8TqyQGQyICQAw&amp;amp;usg=AFQjCNH5_5rmWkIrsvVnsmsmLBsJh2TmQw&amp;amp;sig2=h78l075mlsJ_7a4E-8Ubbw&amp;amp;bvm=bv.50723672,d.aWc&quot;&gt;This week’s New York Times Magazine&lt;/a&gt; has a detailed piece on documentary filmmaker Laura Poitras, who along with Glen Greenwald of The Guardian helped National Security Agency contractor Edward Snowden leak thousands of documents about the agency and its digital surveillance programs. &lt;/p&gt;
+
+&lt;p&gt;One of the most interesting pieces n the piece for journailsm is a section forwarded to me by a cowowrker. In it, the Times describes Poitras as having as skillset that is”particularly vital — and far from the journalistic norm — in an era of pervasive government spying: she knows, as well as any computer-security expert, how to protect against surveillance.” &lt;/p&gt;
+
+&lt;p&gt;We mentioned this on the IRE site, as discussion of government surveillance and protecting both journalists and sources have dominated much of the discussion in the IRE community lately – on listservs, social media and at the IRE Conference.&lt;/p&gt;
+
+&lt;p&gt;One the IRE blog, we gathered some links and teaching materials to help journalists get acquainted with these tools. Tomorrow, we’re rolling out a webinar on Spycraft that covers a lot of these topics and has other great tips.&lt;/p&gt;
+
+&lt;p&gt;If you’re interested in learning how to implement safer interent use, off-the-record chatting and encrypted email, take a look:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ire.org/blog/ire-news/2013/08/13/how-journalists-can-learn-safer-communication/&quot;&gt;http://ire.org/blog/ire-news/2013/08/13/how-journalists-can-learn-safer-communication/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You’ll find some interesting tips whether you’re a journalist or not, like how to have a secure password (hint: you don’t need weird characters L!k3 Th!$! There are easier, better ways.)&lt;/p&gt;
+</description>
+        <pubDate>Wed, 14 Aug 2013 05:19:00 -0700</pubDate>
+        <link>http://anthonyschick.com/jekyll/update/2013/08/14/journalists-security/</link>
+        <guid isPermaLink="true">http://anthonyschick.com/jekyll/update/2013/08/14/journalists-security/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>

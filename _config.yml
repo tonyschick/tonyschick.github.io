@@ -1,0 +1,12 @@
+# Site settings
+title: Tony Schick
+email: schick.anthony@gmail.com
+description: "journalist, etc."
+baseurl: ""
+url: "http://anthonyschick.com"
+twitter_username: tonyvschick
+github_username:  tonyschick
+
+# Build settings
+markdown: kramdown
+permalink: pretty
