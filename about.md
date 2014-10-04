@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: about
 permalink: /about/
 ---
 
@@ -8,8 +8,10 @@ Tony is a journalist on the EarthFix team at [Oregon Public Broadcasting](http:/
 
 He lives in live in Portland, Ore., with his wife, Liz, and their dog, Myron.
 
-He's done freelance journalism and research since 2007. If you're interested in working with him, email him at schick.anthony@gmail.com.
+He's done freelance journalism and research since 2007. If you're interested in working with him, email him at schick dot anthony at gmail.com.
+
+[public key](http://pgp.mit.edu/pks/lookup?op=get&search=0xE3A41916D23BA9B1)
 
 ---
 
-This site is powered by [Jekyll](http://jekyllrb.com/)
+This is powered by [Jekyll](http://jekyllrb.com/)

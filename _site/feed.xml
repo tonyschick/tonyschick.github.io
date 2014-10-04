@@ -5,37 +5,69 @@
     <description>journalist, etc.</description>
     <link>http://anthonyschick.com/</link>
     <atom:link href="http://anthonyschick.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 02 Aug 2014 20:32:03 -0700</pubDate>
-    <lastBuildDate>Sat, 02 Aug 2014 20:32:03 -0700</lastBuildDate>
+    <pubDate>Fri, 03 Oct 2014 23:49:02 -0700</pubDate>
+    <lastBuildDate>Fri, 03 Oct 2014 23:49:02 -0700</lastBuildDate>
     <generator>Jekyll v2.2.0</generator>
     
       <item>
         <title>Creating and mapping a rate to compare to the federal poverty measure</title>
-        <description>&lt;p&gt;One of the main tasks within a project I’ve been working that I’ve dubbed “Poorly Defined” – a year-long writing fellowship covering poverty funded by the Missouri School of Journalism – is using data that’s compiled on “living wages” to create a rate that can be compared to the official poverty rate. Most people look at the official poverty thresholds, which haven’t been updated in nearly 50 years, and struggle to understand how a single person could get by on $TK, let alone how a single parent of 3 could get by on $TK in New York City (For a great simplified explanation of this, check out this brief story from a recent episode of NPR’s Planet Money).&lt;/p&gt;
+        <description>&lt;iframe frameborder=&quot;0&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;640&quot; src=&quot;http://a.tiles.mapbox.com/v3/tonyschick.road-trip/page.html#4/40.25/-88.95&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;In recent years, nonprofit groups, sociologists and economists have been developing new thresholds that better estimate the cost of living in the U.S., that include work-related expenses and child care, and that – perhaps most significantly – adjust for geographic differences in cost of living. Efforts include the Self-Sufficiency Standard from researchers at the University of Washington, the Family Budget Calculator from the Economic Policy Institute, Basic Economic Security Tables from Wider Opportunities for Women and The Living Wage Calculator from the Massachusetts Institute of Technology.&lt;/p&gt;
+&lt;p&gt;One of the main tasks within a project I’ve been working that I’ve dubbed “Poorly Defined” – a year-long writing fellowship covering poverty funded by the Missouri School of Journalism – is using data that’s compiled on “living wages” to create a rate that can be compared to the official poverty rate. Most people look at the official poverty thresholds, which haven’t been updated in nearly 50 years, and struggle to understand how a single person could get by on, say, $18,000, let alone how a single parent of 3 could get by on $18,000 in New York City. For a great simplified explanation of this, check out &lt;a href=&quot;http://www.npr.org/blogs/money/2013/08/27/214822459/a-college-kid-a-single-mom-and-the-problem-with-the-poverty-line&quot;&gt;this brief story from a recent episode of NPR’s Planet Money.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;My aim, which I’d included in my original pitch to the University of Missouri more than a year ago (I began work on the project at the start of the year, after I officially graduated), and later included in a pitch to The Investigative Fund of the Nation Institute, was to use one of these well-established thresholds to create a rate we could compare to the poverty rate, both nationally and for different locations. Our first charge was to figure out which measure to use. All of them are fairly similar, but we needed to decide which one we would rely on.&lt;/p&gt;
+&lt;p&gt;In recent years, nonprofit groups, sociologists and economists have been developing new thresholds that better estimate the cost of living in the U.S., that include work-related expenses and child care, and that – perhaps most significantly – adjust for geographic differences in cost of living. &lt;/p&gt;
+
+&lt;p&gt;Efforts include the Self-Sufficiency Standard from researchers at the University of Washington, the Family Budget Calculator from the Economic Policy Institute, Basic Economic Security Tables from Wider Opportunities for Women and The Living Wage Calculator from the Massachusetts Institute of Technology.&lt;/p&gt;
+
+&lt;p&gt;My aim, which I’d included in my original pitch to the University of Missouri and later included in a pitch to The Investigative Fund of the Nation Institute, was to use one of these well-established thresholds to create a rate we could compare to the poverty rate, on a national level and for different locations. &lt;/p&gt;
+
+&lt;p&gt;Our first charge was to figure out which measure to use. All of them are fairly similar, but we needed to decide which one we would rely on.&lt;/p&gt;
 
 &lt;p&gt;The Self-Sufficiency Standard, created by Diana Pearce, has been around the longest and is the most detailed, as it’s calculated for more than 60 family types. But, it’s calculated on a per contract basis, so it’s only been created for about 37 states, and many of those standards are several years out of date. The Basic Family Budget Calculator has been calculated for far fewer family types and presents similar geographic challenges. We ultimately decided on the Living Wage Calculator: It comes from MIT, a trusted institution, has a published methodology, was updated within the past year, has been widely cited and has stood up to scrutiny, and has been calculated for every county in the U.S., meaning we could do a fairly detailed and consistent analysis across the country.&lt;/p&gt;
 
-&lt;p&gt;So we had our threshold – half of the equation for calculating a poverty rate – and it was created for us. The other half we needed was a population’s worth of income data, and we needed real families’ incomes so that we could apply the right threshold to each one. So we turned to the Public Use Microdata Sample (PUMS). PUMS is a sample of actual responses, not aggregate statistics, within the Census Bureau’s American Community Survey. It’s a trove of information that can be used to determine things like what former Oregonians are doing in Missouri or how many public school teachers send their kids to private school.&lt;/p&gt;
+&lt;p&gt;So we had our threshold – half of the equation for calculating a poverty rate – and it was created for us. The other half we needed was a population’s worth of income data, and we needed real families’ incomes so that we could apply the right threshold to each one. &lt;/p&gt;
+
+&lt;p&gt;So we turned to the Public Use Microdata Sample (PUMS). &lt;/p&gt;
+
+&lt;p&gt;PUMS is a sample of actual responses, not aggregate statistics, within the Census Bureau’s American Community Survey. It’s a trove of information that can be used to determine things like what former Oregonians are doing in Missouri or how many public school teachers send their kids to private school.&lt;/p&gt;
 
 &lt;p&gt;To get the dataset we needed, I had to code the families in PUMS into the 8 family types created in the Living Wage Calculator (having only 8 family types, this somewhat underestimates the cost of living for families with more than 3 children, though the threshold is still much higher than the official poverty line).&lt;/p&gt;
 
-&lt;p&gt;This required some judgment calls, though. What constitutes a family and what doesn’t? The official poverty measure has a fairly traditional definition: If you’re an unmarried partner, roommate or non-immediate family member, you’re an individual unit, separate from the family you might live with. Parsing the families this way was one option. The other was assuming that all members of a household, regardless of relationship, share resources to some degree rather than not at all. I decided to try coding it both ways and realized the difference was negligible, smaller than the margin of error for each sample, and choosing one over the other would not have an impact on the analysis. I ultimately went with all members of a household.&lt;/p&gt;
+&lt;p&gt;This required some judgment calls, though. What constitutes a family and what doesn’t? The official poverty measure has a fairly traditional definition: If you’re an unmarried partner, roommate or non-immediate family member, you’re an individual unit, separate from the family you might live with. &lt;/p&gt;
 
-&lt;p&gt;Determining household type required knowing the number of adults and children in each household. The official measure differentiates between individuals above and below age 18. Because the Living Wage Calculator includes child care as a not insignificant cost, that differentiation makes little sense. I decided to consider any household member age 14 or above and without a self-care disability to be an adult (PUMS has fields listing whether an individual has certain disabilities). This prevented us from applying child care costs to households without individuals requiring child care .As I went about making these decisions, I spoke with analysts from other projects such as the Self-Sufficiency Standard and red technical papers and spoke with representatives from the Census Bureau.&lt;/p&gt;
+&lt;p&gt;Parsing the families this way was one option. The other was assuming that all members of a household, regardless of relationship, share resources to some degree rather than not at all. &lt;/p&gt;
 
-&lt;p&gt;But PUMS presented another challenge. Its main limitation is geography. For privacy purposes, and to keep the records anonymous, the smallest geography the data are available in is called a Public Use Microdata Area (PUMA). These are designed to to include at least 100,000 people and thus are in some cases smaller than counties and in some cases are much larger. But the areas within each PUMA tend to be demographically and economically similar, but of course there is some variation.&lt;/p&gt;
+&lt;p&gt;I decided to try coding it both ways and realized the difference was negligible, much smaller than the margin of error in each sample, and choosing one over the other would ultimately not have a meaningful affect on  the outcome of the analysis. So to save time, I went with all members of a household.&lt;/p&gt;
 
-&lt;p&gt;So how did we reconcile county-level thresholds with PUMA-level incomes? We turned to John Blodgett of the Missouri Census Data Center, the University of Missouri organization that created a geographic conversion tool. As it turns out, arguably the country’s leading expert on conversions between these boundaries worked on the same university campus I did. Blodgett walked a colleague of mine and me through how take weighted averages of the county thresholds and disperse them to the PUMAs. So what we ended up with were PUMA-level thresholds based on averages from the counties, which gave us an accurate and defensible representation.&lt;/p&gt;
+&lt;p&gt;Determining household type required knowing the number of adults and children in each household. The official measure differentiates between individuals above and below age 18. Because the Living Wage Calculator includes child care as a not insignificant cost, that differentiation makes little sense. I decided to consider any household member age 14 or above and without a self-care disability to be an adult (PUMS has fields listing whether an individual has certain disabilities). This prevented us from applying child care costs to households without individuals requiring child care. &lt;/p&gt;
 
-&lt;p&gt;Once we had both the incomes and the thresholds, it was simple math and crosstabs (I used SPSS software) to determine whether a household was above or below the living wage line and ultimately to determine the rate for each PUMA.&lt;/p&gt;
+&lt;p&gt;These are judgment calls, always tough in an analysis.As I went about making these decisions, I spoke with analysts from other projects such as the Self-Sufficiency Standard and red technical papers and spoke with representatives from the Census Bureau.&lt;/p&gt;
 
-&lt;p&gt;Getting those calculations was a triumphant moment, but I soon realized it didn’t mean anything. I don’t know where or what area 0100200 is (well, actually by now I know it’s somewhere around Autauga County, Alabama, but you get the point). So to actually make sense of the calculations, I had to either a) convert it back to counties or b) map it. I figured if we could take the county data and convert it to PUMAs, then why couldn’t we do the reverse and go back again? So I did that and made a stupid mistake. Doing that showed Oconee County, Georgia with the highest difference between the poverty rate and the below-living-wage rate. So by some measure, that means Oconee County has the highest number of uncounted poor. Google Oconee County, and you’ll realize that doesn’t make sense, as it’s one of the most prosperous counties in Georgia. What happened? Well, Oconee County has a relatively low poverty rate but it surrounded by poorer counties. None of them are densely populated, so they are grouped into one PUMA with a relatively high rate of people below the living wage threshold. When I converted it back to counties, Oconee was assigned that high rate, which wasn’t an accurate representation of it.&lt;/p&gt;
+&lt;p&gt;But PUMS presented another challenge. The main limitation of the dataset is geography. For privacy purposes the most precise geography available is called a Public Use Microdata Area (PUMA). These are designed to to include at least 100,000 people and thus in some cases are smaller than counties and in some cases are much larger. The areas within each PUMA tend to be demographically and economically similar, but of course there is some variation.&lt;/p&gt;
 
-&lt;p&gt;So, that wasn’t going to work. Mapping, then, was the best way to understand the data. Using Quantum GIS, TileMill and Mapbox, I created this map, a “chloropeth” map shaded by the rate of people below the living wage threshold. You can see clusters of high disparity in urban areas like New York, Chicago, Atlanta, the San Francisco-Oakland Bay Area and Los Angeles, all of which have a newly calculated rate more than 20 percentage points higher than the official poverty rate. The next step is reviewing the map with editors to determine the best places for on-the-ground reporting.&lt;/p&gt;
+&lt;p&gt;So how did we reconcile county-level thresholds with PUMA-level incomes? We turned to John Blodgett of the Missouri Census Data Center, the University of Missouri organization that created a geographic conversion tool.As it turns out, arguably the country’s leading expert on conversions between these boundaries worked on the same university campus I did. &lt;/p&gt;
+
+&lt;p&gt;Blodgett walked me and an interested colleague through how to take weighted averages of the county thresholds and disperse them to the PUMAs. So what we ended up with were PUMA-level thresholds based on averages from the counties, which gave us an accurate and defensible representation.&lt;/p&gt;
+
+&lt;p&gt;Once we had both the incomes and the thresholds, it was simple math and crosstabs to determine whether a household was above or below the living wage line and ultimately to determine the rate for each PUMA. (I started doing this in the R statistical language but eventually switched to SPSS software. It crunched the numbers faster, plus R was a new language for me. The analysis alone was complex enough. I didn’t need to throw a new language on top of it)&lt;/p&gt;
+
+&lt;p&gt;Getting those calculations was a triumphant moment, but I soon realized it didn’t mean anything.&lt;/p&gt;
+
+&lt;p&gt;I don’t know where or what area 0100200 is (well, truthfully by now I know it’s somewhere around Autauga County, Alabama, but you get the point). To actually make sense of the calculations, I had to either a) convert it back to counties or b) map it. I figured if we could take the county data and convert it to PUMAs, then why couldn’t we do the reverse and go back again? &lt;/p&gt;
+
+&lt;p&gt;So I did that. And I made a stupid mistake. Doing that told me Oconee County, Georgia, had the highest difference between the poverty rate and the below-living-wage rate. So by my measure, that means Oconee County has the highest number of uncounted poor. &lt;/p&gt;
+
+&lt;p&gt;Google Oconee County. That doesn’t pass the sniff test.It’s one of the most prosperous counties in Georgia. &lt;/p&gt;
+
+&lt;p&gt;What happened? Well, Oconee County has a relatively low poverty rate but it’s surrounded by poorer counties. None of them are densely populated, so they are grouped into one PUMA with a relatively high rate of people below the living wage threshold. When I converted it back to counties, Oconee was assigned that high rate, which wasn’t an accurate representation of it.&lt;/p&gt;
+
+&lt;p&gt;So, that wasn’t going to work. &lt;/p&gt;
+
+&lt;p&gt;Mapping, then, was the best way for me to understand the data spatially. Using Quantum GIS, TileMill and Mapbox, &lt;a href=&quot;http://a.tiles.mapbox.com/v3/tonyschick.road-trip/page.html#4/40.25/-88.95&quot;&gt;I created this map&lt;/a&gt;, a “chloropeth” map shaded by the rate of people below the living wage threshold. You can see clusters of high disparity in urban areas like New York, Chicago, Atlanta, the San Francisco-Oakland Bay Area and Los Angeles, all of which have a newly calculated rate more than 20 percentage points higher than the official poverty rate. &lt;/p&gt;
+
+&lt;p&gt;The next step is reviewing the map with editors to determine the best places for on-the-ground reporting.&lt;/p&gt;
+
+&lt;p&gt;– &lt;em&gt;Tony&lt;/em&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 10 Oct 2013 05:19:00 -0700</pubDate>
@@ -53,11 +85,15 @@
         <title>Tracking data sources during the government shutdown</title>
         <description>&lt;p&gt;The government has shut down. National parks, our greatest treasure, have closed. Census data, sickeningly, is considered “non-essential.”&lt;/p&gt;
 
-&lt;p&gt;Let IRE light your darkest hour.[1]&lt;/p&gt;
+&lt;p&gt;Let IRE &lt;a href=&quot;http://tfwiki.net/wiki/Matrix_of_Leadership&quot;&gt;light your darkest hour.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;That was the joke intro I wrote for a short post on the IRE site, which, sadly, didn’t make it into the final version.&lt;/p&gt;
+&lt;p&gt;That was the joke intro I wrote for a short post on the IRE site, which, sadly, &lt;a href=&quot;http://ire.org/blog/ire-news/2013/10/01/ire-keep-data-library-open-during-government-shutd/&quot;&gt;didn’t make it into the final version.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;But in all seriousness, the fact that .gov sites across the web aren’t available is a problem for public information, and particularly for the journalists who use that public data to find and tell important stories. So I started a spreadsheet for IRE in an attempt to keep track of what data are available, what has been closed off and what alternative sources are available. We’re crowdsourcing it, so if you know of  a data source we should add to the list, click on this link to the spreadsheet and add it to the list.&lt;/p&gt;
+&lt;p&gt;But in all seriousness, the fact that .gov sites across the web aren’t available is a problem for public information, and particularly for the journalists who use that public data to find and tell important stories. So I started a spreadsheet for IRE in an attempt to keep track of what data are available, what has been closed off and what alternative sources are available. We’re crowdsourcing it, so if you know of  a data source we should add to the list, &lt;a href=&quot;https://docs.google.com/spreadsheet/ccc?key=0AgpfEpjOJpeEdEV1UnNxbHRkb1RKTnIzSGpQXzRPLUE&amp;amp;usp=sharing&quot;&gt;click on this link to the spreadsheet and add it to the list.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;– &lt;em&gt;Tony&lt;/em&gt;&lt;/p&gt;
+
+&lt;iframe src=&quot;https://docs.google.com/spreadsheet/pub?key=0AgpfEpjOJpeEdEV1UnNxbHRkb1RKTnIzSGpQXzRPLUE&amp;amp;output=html&quot; width=&quot;100%&quot; height=&quot;350&quot;&gt;&lt;/iframe&gt;
 
 </description>
         <pubDate>Thu, 10 Oct 2013 05:19:00 -0700</pubDate>
@@ -73,23 +109,306 @@
     
       <item>
         <title>Visualizing wildlife trade data</title>
-        <description>&lt;p&gt;I’ve been wanting to use wildlife trade data for a long time. Wildlife trafficking fascinates me. I’ve also been looking for a data viz project, because after seeing it in action and reading/hearing about how great the javascript library is for working with data, I’ve been eager to build something of my own with D3js.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;http://evening-meadow-8175.herokuapp.com/projects/wildlife/&quot; target=&quot;_blank&quot;&gt;&lt;img style=&quot;width: 100%&quot; src=&quot;/imgs/wildlife.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Putting the two together was pretty fun. &lt;/p&gt;
+&lt;p&gt;I’ve been wanting to use wildlife trade data for a long time. Wildlife trafficking fascinates me. I’ve also been looking for a data viz project, because after seeing it in action and reading/hearing about how great the javascript library is for working with data, I’ve been eager to build something of my own with D3js.&lt;/p&gt;
 
-&lt;p&gt;What I originally (and still) wanted to do, was access the full database and build a web application that allowed users to search trades over time as well as view visualizations of trade trends, trades between countries, and traffic for each species. But I can’t do that yet, because I don’t have full access to the database (more on this below). Right now, the visualization shows live wildlife trade for 2011, the latest year available. Coming next is the addition of non-live trade such as animal parts, which is a little trickier because some of them are measured in units, some in milligrams, some in other metrics, etc. So once I clean that up and figure out how to aggregate the data given the various units of measurement, you’ll be able to see that here as well.&lt;/p&gt;
+&lt;p&gt;Putting the two together was pretty fun. &lt;a href=&quot;http://evening-meadow-8175.herokuapp.com/projects/wildlife/&quot;&gt; Here’s a link to the visualization on my old site. &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;I then opted to create an initial visualization and build on it when I could. Looking through the D3 examples of different visualizations, I realized the chord diagram would be a really interesting way to analyze trade data between countries.&lt;/p&gt;
+&lt;p&gt;What I originally wanted to do was access the full database and build a web application that allowed users to search trades over time as well as view visualizations of trade trends, trades between countries, and traffic for each species. This would have been a really useful tool for reporting on this subject, too.&lt;/p&gt;
 
-&lt;p&gt;It should be noted that what I created isn’t a fully vetted journalistic piece yet. I’ve taken steps to clean the database and ensure the accuracy of the visualization, but I haven’t shown anything to CITES, nor have I fully reported out any outliers or odd trend.&lt;/p&gt;
+&lt;p&gt;But I can’t do that yet, because I don’t have full access to the database (more on this below). Right now, the visualization shows live wildlife trade for 2011, the latest year available. &lt;/p&gt;
 
-&lt;p&gt;Like all data, CITES data are dirty. First off, the trade reporting the database is based on could be incomplete and in some cases almost certainly is. Also, trade is reported by both countries, but one country’s trade report might not match up with the other’s. That can cause problems.&lt;/p&gt;
+&lt;p&gt;The next logical step is the addition of non-live trade such as animal parts, which is a little trickier because some of them are measured in units, some in milligrams, some in other metrics, etc. So once I clean that up and figure out how to aggregate the data given the various units of measurement, you’ll be able to see that here as well.&lt;/p&gt;
+
+&lt;p&gt;I opted to create an initial visualization and build on it when I could. The database is vast enough and my idea lofty enough that if I waited for everything to be right, I’d never dive in. &lt;/p&gt;
+
+&lt;p&gt;Looking through the D3 examples of different visualizations, I realized the chord diagram would be a really useful way to analyze trade data between countries. (The example shows debts between countries).&lt;/p&gt;
+
+&lt;p&gt;I feel compelled to offer this disclaimer: what I created isn’t a fully vetted journalistic piece. I’ve taken some steps to clean the database and ensure the accuracy of the visualization, but I haven’t shown anything to CITES, nor have I fully reported out any outliers or odd trends. I’m posting it as a experiment into what can be done with this data and with D3. So please, if you want to draw conclusions about international trade, don’t use this. Go directly to CITES. &lt;/p&gt;
+
+&lt;p&gt;Like all data, CITES data are dirty. Really pretty dirty. First off, the trade reporting that the database relies on could be incomplete. In some cases it almost certainly is. Also, trade is reported by both countries involved (importer and exporter), but one country’s trade report might not match up with the other’s. Oh what fun we’re having.&lt;/p&gt;
 
 &lt;p&gt;Here’s how I put it together, in boring detail:&lt;/p&gt;
 
-&lt;p&gt;The first step was accessing and understanding the data. I had some familiarity with wildlife trade data from the Convention on International Trade in Endangered Species of Wild Flora and Fauna (CITES) because about four years ago, when I was an intern at National Geographic Magazine, they were working on this investigation into Asia’s Wildlife Trade, and my editor was wrestling with the data.&lt;/p&gt;
+&lt;p&gt;I had some familiarity with wildlife trade data from the Convention on International Trade in Endangered Species of Wild Flora and Fauna (CITES) because about four years ago, when I was an intern at National Geographic Magazine, they were working on this investigation into Asia’s Wildlife Trade, and my editor was wrestling with the data.&lt;/p&gt;
 
-&lt;p&gt;CITES allows you to download extracts of its data, but it chokes if you try downloading all records for even a year. So getting the whole database, which dates back several decades, wasn’t going to happen (though I have asked nicely and am told by CITES representatives that they might be able to send me bigger extracts). So I knew that if I wanted to get a full year, I was going to have to find a way to download smaller extracts and sew them together. That sounds like a pain, doesn’t it? Well, thanks to a simple Python script, it wasn’t. What I did was download a single csv (comma-separated records) file for different types of trade in the database, which kept the download size within the limit. Then I wrote this basic script …&lt;/p&gt;
+&lt;p&gt;CITES allows you to download extracts of its data, but it chokes if you try downloading all records for even a year. So getting the whole database, which dates back several decades, wasn’t going to happen (though I have asked nicely and am told by CITES representatives that they might be able to send me bigger extracts).&lt;/p&gt;
+
+&lt;p&gt;I knew that if I wanted to get a full year, I was going to have to find a way to download smaller extracts and sew them together. That sounds like a pain, doesn’t it? Well, thanks to a simple Python script, it wasn’t. What I did was download a single csv (comma-separated records) file for different types of trade in the database, which kept the download size within the limit. Then I wrote this basic script …&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	import pandas
+	from pandas import *
+	import numpy
+	 
+	# abbreviate the pandas module for ease of scripting
+	pd = pandas
+	 
+	# read the various csv files as variables
+	# these are the csv files we downloaded one by one
+	# because of the site&#39;s download size restrictions
+	 
+	be = pd.read_csv(&quot;data/2011compare_be.csv&quot;)
+	 
+	ghlm = pd.read_csv(&quot;data/2011compare_ghlm.csv&quot;)
+	 
+	q = pd.read_csv(&quot;data/2011compare_q.csv&quot;)
+	 
+	s = pd.read_csv(&quot;data/2011compare_s.csv&quot;)
+	 
+	z = pd.read_csv(&quot;data/2011compare_z.csv&quot;)
+	 
+	compare2011 = pd.concat((be, ghlm, s, z), axis=0)
+	 
+	compare2011.to_csv(&quot;2011compare.csv&quot;)
+	 
+	print &quot;All done!&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;]… and while I was filling up my water bottle it was stitching together my data. Let’s walk through it step by step.&lt;/p&gt;
+
+&lt;p&gt;import pandas
+from pandas import *
+import numpy&lt;/p&gt;
+
+&lt;p&gt;This saying “Hey, import these pre-made packages. We’re going to use some of their stuff.” To run this script, you’ve got to have pandas and numpy installed. They are tools that make it easier to do math and data science using Python. They make it easier to do what we do later on.&lt;/p&gt;
+
+&lt;p&gt;pd = pandas&lt;/p&gt;
+
+&lt;p&gt;All this does is abbreviate pandas to pd. For a script this small, it’s not really necessary. It just makes it faster to write later on, and it’s how I learned it, so I always write it because I’m used to writing “pd” rather than “pandas” later on.&lt;/p&gt;
+
+&lt;p&gt;be = pd.read_csv(“data/2011compare_be.csv”)&lt;/p&gt;
+
+&lt;p&gt;This is telling the script we’ve got a new variable that we’re going to store some information in. So it says “hey there, we’ve got a new variable called ‘be’ and inside ‘be’ you’re going to store whatever information you get out of the following command. The following command happens to be one called “read_csv” and “read_csv” doesn’t just exist everywhere, it exists within the package known as pandas. That’s why we have to import pandas, and from pandas we have to import everything (the asterisk is a symbol for all in the code above). So, “read_csv” is built to understand a comma-separated file, and all we have to do is tell it where the file is. I repeated this for each of the files.&lt;/p&gt;
+
+&lt;p&gt;compare2011 = pd.concat((be, ghlm, s, z), axis=0)&lt;/p&gt;
+
+&lt;p&gt;This says “create a new variable and that varialbe will be equal to all the other variables added together”. Concat, in this context, vertically stacks the data because we specified the axis of 0. If we specified an axis of 1, it would append each file as a new set of columns rather than a new set of rows.&lt;/p&gt;
+
+&lt;p&gt;compare2011.to_csv(“2011compare.csv”)&lt;/p&gt;
+
+&lt;p&gt;Save what we just made as a new csv file.&lt;/p&gt;
+
+&lt;p&gt;Once I had the csv of all the records for 2011, I still had a little cleaning to do. The first thing I had to do was aggregate it. I found out the hard way, by screwing it up, that the javascript I was using to visualize the data couldn’t process it correctly if it had multiple enries, like this:&lt;/p&gt;
+
+&lt;p&gt;u.s., britain
+u.s., china
+u.s., russia,
+u.s., britain&lt;/p&gt;
+
+&lt;p&gt;So I ran a pivot table. Then, I wanted actual county names, rather than the two letter country code, so I had to create a separate table for this, which I downloaded from CITES. I then imported it all into MySQL so that I could do a join and make sure the right full country names were connected to the right country codes. Yes, I could have done this just using the Python language, but I thought it would be a good idea to have my data in a database.&lt;/p&gt;
+
+&lt;p&gt;Once I had the aggregate data and the proper file names, I was ready to start the visualization. To learn how to use D3, I downloaded a book (it was free) from the very helpful O’Reilly , called &lt;a href=&quot;http://chimera.labs.oreilly.com/books/1230000000345&quot;&gt;Interactive Data Visualization For the Web&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I ran through it once and found D3 to be not only one of the most helpful but one of the most intuitive javascript libraries I’ve found. It’s incredibly powerful, and its abilities go way beyond what I’m capable of producing, and its depths are way beyond what I can understand at this point. But, as far as working with data in a browser, creating visualizations and interactivity, D3 makes a lot of sense.&lt;/p&gt;
+
+&lt;p&gt;Here’s the full D3 script, which I tried to annotate as best I could. Full disclosure: some of this was borrowed from examples at &lt;a href=&quot;http://d3js.org&quot;&gt;d3js.org&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;If any of it doesn’t make sense but you’d like it to, or you have a problem with some of it you think I should change, let me know. You can contact me through the links at the side of the page.&lt;/p&gt;
+
+&lt;p&gt;– &lt;em&gt;Tony&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Chart dimensions.
+		        var w = 1200,
+		            h = 1000,
+		            r1 = Math.min(650, 650)/2,
+		            r0 = r1 - 20,
+		            format = d3.format(“,.3r”);&lt;/p&gt;
+
+&lt;p&gt;Square matrices, asynchronously loaded; exports is the transpose of imports.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	        var imports = [],
+	            exports = [];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The chord layout, for computing the angles of chords and groups.
+		        var layout = d3.layout.chord()
+		            .sortGroups(d3.descending)
+		            .sortSubgroups(d3.descending)
+		            .sortChords(d3.descending)
+		            .padding(.025);&lt;/p&gt;
+
+&lt;p&gt;The arc generator, for the groups.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	        var arc = d3.svg.arc()
+	            .innerRadius(r0)
+	            .outerRadius(r1);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The chord generator (quadratic Bézier), for the chords.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	        var chord = d3.svg.chord()
+	            .radius(r0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add an SVG element for each diagram, and translate the origin to the center.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	        var svg = d3.selectAll(&quot;body&quot;).selectAll(&quot;section&quot;)
+	            
+			.data([imports, exports])
+			.enter().append(&quot;div&quot;)
+			.style(&quot;display&quot;, &quot;inline-block&quot;)
+			.style(&quot;width&quot;, w + &quot;px&quot;)
+			.style(&quot;height&quot;, h + &quot;px&quot;)
+			.append(&quot;svg:svg&quot;)
+			.attr(&quot;width&quot;, w)
+			.attr(&quot;height&quot;, h)
+			.append(&quot;svg:g&quot;)
+			.attr(&quot;transform&quot;, &quot;translate(&quot; + w / 2 + &quot;,&quot; + h / 2 + &quot;)&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Load our data file. Which, I’m being pretty lazy about just loading from Dropbox:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	        d3.csv(&quot;https://dl.dropboxusercontent.com/u/24686053/wildlife_live3.csv&quot;, function(data) {
+	          var countries = {},
+	              array = [],
+	              n = 0;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Compute a unique id for each country.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	          data.forEach(function(d) {
+	            d.Importer  = country(d.Importer);
+	            d.Exporter = country(d.Exporter);
+	            d.valueOf = value; // convert object to number implicitly
+	          });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Initialize a square matrix of imports and exports.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	          for (var i = 0; i &amp;lt; n; i++) {
+	            imports[i] = [];
+	            exports[i] = [];
+	            for (var j = 0; j &amp;lt; n; j++) {
+	              imports[i][j] = 0;
+	              exports[i][j] = 0;
+	            }
+	          }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Populate the matrices, and stash a map from id to country.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	          data.forEach(function(d) {
+	            imports[d.Exporter.id][d.Importer.id] = d;
+	            exports[d.Importer.id][d.Exporter.id] = d;
+	            array[d.Exporter.id] = d.Exporter;
+	            array[d.Importer.id] = d.Importer;
+	          });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For each diagram…&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	          svg.each(function(matrix, j) {
+	            var svg = d3.select(this);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Compute the chord layout.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	            layout.matrix(matrix);
+	 
+	            svg.insert(&quot;text&quot;)
+	                .text(function(d) { return (j ? &quot;Imports &quot; : &quot;Exports &quot;); })
+	                .attr(&quot;class&quot;, &quot;splainerhead&quot;)
+	                .attr(&quot;x&quot;, -450 + &quot;px&quot;)
+	                .attr(&quot;y&quot;, -450 + &quot;px&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add the chords to the svg:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	            svg.selectAll(&quot;path.chord&quot;)
+	                .data(layout.chords)
+	              .enter().append(&quot;svg:path&quot;)
+	                .attr(&quot;class&quot;, &quot;chord&quot;)
+	                .style(&quot;fill&quot;, function(d) { return fill(d.source.value); })
+	                .style(&quot;stroke&quot;, function(d) { return fill(d.source.value); })
+	                .attr(&quot;d&quot;, chord)
+	                .append(&quot;svg:title&quot;)
+	                .text(function(d) { return format(d.source.value) + &quot; live animals &quot; + &quot;from &quot; + d.source.value.Exporter.name + &quot; to &quot; + d.source.value.Importer.name; })
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add groups.
+		            var g = svg.selectAll(“g.group”)
+		                .data(layout.groups)
+		                .enter().append(“svg:g”)
+		                .attr(“class”, “group”)
+		                .style(“cursor”, “pointer”)
+		                .on(“click”, fade(.01))
+		                .on(“dblclick”, fade(1))&lt;/p&gt;
+
+&lt;p&gt;Add the group arc.
+		            g.append(“svg:path”)
+		                .style(“fill”, “#333”)
+		                .attr(“id”, function(d, i) { return “group” + d.index + “-“ + j; })
+		                .attr(“d”, arc)
+		                .append(“svg:title”)
+		                .text(function(d) { return array[d.index].name + “ “ + (j ? “imported “ : “reportedly exported “) + format(d.value) + “ live animals in 2011”; })&lt;/p&gt;
+
+&lt;p&gt;Add tick marks and labels for each country:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	            var ticks = svg.append(&quot;g&quot;)
+	              .selectAll(&quot;g&quot;)
+	              .data(layout.groups)
+	              .enter().append(&quot;g&quot;)
+	 
+	            ticks.append(&quot;text&quot;)
+	                .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
+	                .attr(&quot;dy&quot;, &quot;.35em&quot;)
+	                .attr(&quot;text-anchor&quot;, function(d) { return d.angle &amp;gt; Math.PI ? &quot;end&quot; : null; })
+	                .attr(&quot;transform&quot;, function(d) {
+	                  return &quot;rotate(&quot; + (d.angle * 180 / Math.PI - 90) + &quot;)&quot;
+	                      + &quot;translate(&quot; + (r0 + 45) + &quot;)&quot;
+	                      + (d.angle &amp;gt; Math.PI ? &quot;rotate(180)&quot; : &quot;&quot;);
+	                })
+	                .text(function(d) { return array[d.index].name; })
+	                .style(&quot;font-size&quot;, &quot;10px&quot;)
+	                .style(&quot;font-family&quot;, &quot;Verdana&quot;)
+	                .style(&quot;padding&quot;, &quot;2px&quot;)
+	                .style(&quot;cursor&quot;, &quot;pointer&quot;)
+	                .on(&quot;click&quot;, fade(.01))
+	                .on(&quot;dblclick&quot;, fade(1)) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a function to fade out the arc,  to be applied to all countries except for the one selected.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	        function fade(opacity) {
+	          return function(g, i) {
+	                  svg.selectAll(&quot;path.chord&quot;)
+	                      .filter(function(d) {
+	                        return d.source.index != i &amp;amp;&amp;amp; d.target.index != i;
+	                      })
+	                    .transition(30)
+	                      .style(&quot;opacity&quot;, opacity);
+	                }
+	        }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add the label, and on it apply a mouseover and mou
+		            g.append(“svg:text”)
+		               // .attr(“x”, 0)
+		               // .attr(“dy”, 0)
+		               // .append(“svg:textPath”)
+		               // .attr(“xlink:href”, function(d) { return “#group” + d.index + “-“ + j; })
+		               // .text(function(d) { return array[d.index].name; })
+		               // .on(“mouseover”, fade(.1))
+		               // .on(“mouseout”, fade(1));
+		            });&lt;/p&gt;
+
+&lt;p&gt;Memorize the specified country, computing a unique id.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	            function country(d) {
+	              return countries[d] || (countries[d] = {
+	                name: d,
+	                id: n++
+	              });
+	            }
+	 
+	 
+	            function value() {
+	              return +this.Quantity;
+	            }
+	 
+	        });
+&lt;/code&gt;&lt;/pre&gt;
 
 </description>
         <pubDate>Tue, 24 Sep 2013 05:19:00 -0700</pubDate>
@@ -111,19 +430,26 @@
 
 &lt;p&gt;Enter web scraping. Using a programming language, you can write a script to tell your computer how to go fetch the records out of that online database and spit it back to you as a spreadsheet. What a wonderful world.&lt;/p&gt;
 
-&lt;p&gt;In my case, I used the Python programming language, which I’ve been working with for the past year. Using Python, I could automatically check to see how many records are in the database and retrieve them one by one – this would take weeks of mind-numbing labor. The script took me a couple of hours to write and maybe another hour to clean out all the bugs (i.e. stuff I did wrong). It would take an expert programmer a lot less time. The scraper ran for about 42 hours while I was off doing whatever I wanted. And when it was done, I had 64,146 records in a beatiful CSV file, ready to be worked with.&lt;/p&gt;
+&lt;p&gt;In my case, I used the Python programming language, which I’ve been working with for the past year. Using Python, I could automatically check to see how many records are in the database and retrieve them one by one – this would take weeks of mind-numbing labor. The script took me a couple of hours to write and maybe another hour to clean out all the bugs (i.e. stuff I did wrong). It would take an expert programmer a lot less time. The scraper ran for about 42 hours while I was off doing whatever I wanted. And when it was done, &lt;a href=&quot;https://github.com/tonyschick/odoj&quot;&gt;I had 64,146 records in a beatiful CSV file, ready to be worked with.&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Before:                          After:&lt;/p&gt;
+&lt;div style=&quot;float: left; width: 38.5%; margin: 1%;&quot;&gt; 
+Before:
+&lt;img style=&quot;width: 100%&quot; src=&quot;/imgs/odoj.png&quot; /&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;float: left; width: 57.5%; margin: 1%;&quot;&gt;
+After:&lt;img style=&quot;width: 100%&quot; src=&quot;/imgs/complaints.png&quot; /&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Web scraping, to me, represents one example of how coding can make you a better journalist. Much is made now of news applications and data visualizations, and for good reason, but I think the emphasis on knowing how to write code for those purposes distracts from how it can make journalists better at the jobs they already do every day. Programming can automate tasks that take up reporters’ time and it can also do things that reporters could never do on their own. The ability to write a computer program doesn’t just mean cool new web tools. It means you’re a more dangerous reporter.&lt;/p&gt;
 
-&lt;p&gt;In my opinion, nobody puts this better than Ben Welsh of the Los Angeles Times Data Desk, when he talks about what he calls human-assisted reporting. View his impassioned “lightning talk” at the 2013 NICAR Conference here. Allow me to paraphrase and bastardize: Right now we treat computers like guns when we’re going after a story. The story is out there, I’m going to find it, and I’m going to target it with my gun. But as journalists we should view “computer-assisted reporting” like the little spider robots in minority report – we should write programs that constantly scour the city and deliver us stories. &lt;/p&gt;
+&lt;p&gt;In my opinion, nobody puts this better than Ben Welsh of the Los Angeles Times Data Desk, when he talks about what he calls human-assisted reporting. &lt;a href=&quot;http://ire.org/conferences/nicar-2013/lightning/&quot;&gt;View his impassioned “lightning talk” at the 2013 NICAR Conference here&lt;/a&gt;. Allow me to paraphrase and bastardize: Right now we treat computers like guns when we’re going after a story. The story is out there, I’m going to find it, and I’m going to target it with my gun. But as journalists we should view “computer-assisted reporting” like the little spider robots in minority report – we should write programs that constantly scour the city and deliver us stories. &lt;/p&gt;
 
 &lt;p&gt;We should also be standardizing all of our data. This doesn’t just apply to people who work with Excel or statistics. It applies to anyone whose got a mess of a MyDocuments folder with 18 versions of the same file that’s been slightly tweaked over and over again. &lt;/p&gt;
 
-&lt;p&gt;So how exactly does my lowly little scraper work? Well, you can check it out – and access the resulting file – here: https://github.com/tonyschick/odoj&lt;/p&gt;
+&lt;p&gt;So how exactly does my lowly little scraper work? Well, you can check it out – and access the resulting file – here: &lt;a href=&quot;https://github.com/tonyschick/odoj&quot;&gt;https://github.com/tonyschick/odoj&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;I’ve included instructions on how to run it. If you want to run it and have trouble, email me at schick.anthony@gmail.com.&lt;/p&gt;
+&lt;p&gt;I’ve included instructions on how to run it. If you want to run it and have trouble, &lt;a href=&quot;/about/&quot;&gt;email me&lt;/a&gt;	.&lt;/p&gt;
 </description>
         <pubDate>Fri, 06 Sep 2013 05:19:00 -0700</pubDate>
         <link>http://anthonyschick.com/jekyll/update/2013/09/06/odoj-scraper/</link>

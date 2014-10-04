@@ -74,13 +74,16 @@
 
         <div class="trigger">
         
-          <a class="page-link" href="/about/">About</a>
+          <a class="page-link" href="/about/">- about</a>
         
           
         
           
         
         </div>
+      </div>
+      <div class="row">
+        <span style="color: #ccc;"><a href="http://pgp.mit.edu/pks/lookup?op=get&search=0xE3A41916D23BA9B1">- public key</a></span></class></p>
       </div>
         <hr />
   </div>
@@ -105,7 +108,7 @@
       </a>
       <div class="trigger">
         
-          <a class="page-link" href="/about/">About</a>
+          <a class="page-link" href="/about/">about</a>
         
           
         
@@ -124,27 +127,310 @@
 
   <header class="post-header">
     <h1>Visualizing wildlife trade data</h1>
-    <p class="meta">Sep 2013</p>
+    <p class="meta">September 2013</p>
   </header>
 
   <article class="post-content">
-  <p>I’ve been wanting to use wildlife trade data for a long time. Wildlife trafficking fascinates me. I’ve also been looking for a data viz project, because after seeing it in action and reading/hearing about how great the javascript library is for working with data, I’ve been eager to build something of my own with D3js.</p>
+  <p><a href="http://evening-meadow-8175.herokuapp.com/projects/wildlife/" target="_blank"><img style="width: 100%" src="/imgs/wildlife.png" /></a></p>
 
-<p>Putting the two together was pretty fun. </p>
+<p>I’ve been wanting to use wildlife trade data for a long time. Wildlife trafficking fascinates me. I’ve also been looking for a data viz project, because after seeing it in action and reading/hearing about how great the javascript library is for working with data, I’ve been eager to build something of my own with D3js.</p>
 
-<p>What I originally (and still) wanted to do, was access the full database and build a web application that allowed users to search trades over time as well as view visualizations of trade trends, trades between countries, and traffic for each species. But I can’t do that yet, because I don’t have full access to the database (more on this below). Right now, the visualization shows live wildlife trade for 2011, the latest year available. Coming next is the addition of non-live trade such as animal parts, which is a little trickier because some of them are measured in units, some in milligrams, some in other metrics, etc. So once I clean that up and figure out how to aggregate the data given the various units of measurement, you’ll be able to see that here as well.</p>
+<p>Putting the two together was pretty fun. <a href="http://evening-meadow-8175.herokuapp.com/projects/wildlife/"> Here’s a link to the visualization on my old site. </a></p>
 
-<p>I then opted to create an initial visualization and build on it when I could. Looking through the D3 examples of different visualizations, I realized the chord diagram would be a really interesting way to analyze trade data between countries.</p>
+<p>What I originally wanted to do was access the full database and build a web application that allowed users to search trades over time as well as view visualizations of trade trends, trades between countries, and traffic for each species. This would have been a really useful tool for reporting on this subject, too.</p>
 
-<p>It should be noted that what I created isn’t a fully vetted journalistic piece yet. I’ve taken steps to clean the database and ensure the accuracy of the visualization, but I haven’t shown anything to CITES, nor have I fully reported out any outliers or odd trend.</p>
+<p>But I can’t do that yet, because I don’t have full access to the database (more on this below). Right now, the visualization shows live wildlife trade for 2011, the latest year available. </p>
 
-<p>Like all data, CITES data are dirty. First off, the trade reporting the database is based on could be incomplete and in some cases almost certainly is. Also, trade is reported by both countries, but one country’s trade report might not match up with the other’s. That can cause problems.</p>
+<p>The next logical step is the addition of non-live trade such as animal parts, which is a little trickier because some of them are measured in units, some in milligrams, some in other metrics, etc. So once I clean that up and figure out how to aggregate the data given the various units of measurement, you’ll be able to see that here as well.</p>
+
+<p>I opted to create an initial visualization and build on it when I could. The database is vast enough and my idea lofty enough that if I waited for everything to be right, I’d never dive in. </p>
+
+<p>Looking through the D3 examples of different visualizations, I realized the chord diagram would be a really useful way to analyze trade data between countries. (The example shows debts between countries).</p>
+
+<p>I feel compelled to offer this disclaimer: what I created isn’t a fully vetted journalistic piece. I’ve taken some steps to clean the database and ensure the accuracy of the visualization, but I haven’t shown anything to CITES, nor have I fully reported out any outliers or odd trends. I’m posting it as a experiment into what can be done with this data and with D3. So please, if you want to draw conclusions about international trade, don’t use this. Go directly to CITES. </p>
+
+<p>Like all data, CITES data are dirty. Really pretty dirty. First off, the trade reporting that the database relies on could be incomplete. In some cases it almost certainly is. Also, trade is reported by both countries involved (importer and exporter), but one country’s trade report might not match up with the other’s. Oh what fun we’re having.</p>
 
 <p>Here’s how I put it together, in boring detail:</p>
 
-<p>The first step was accessing and understanding the data. I had some familiarity with wildlife trade data from the Convention on International Trade in Endangered Species of Wild Flora and Fauna (CITES) because about four years ago, when I was an intern at National Geographic Magazine, they were working on this investigation into Asia’s Wildlife Trade, and my editor was wrestling with the data.</p>
+<p>I had some familiarity with wildlife trade data from the Convention on International Trade in Endangered Species of Wild Flora and Fauna (CITES) because about four years ago, when I was an intern at National Geographic Magazine, they were working on this investigation into Asia’s Wildlife Trade, and my editor was wrestling with the data.</p>
 
-<p>CITES allows you to download extracts of its data, but it chokes if you try downloading all records for even a year. So getting the whole database, which dates back several decades, wasn’t going to happen (though I have asked nicely and am told by CITES representatives that they might be able to send me bigger extracts). So I knew that if I wanted to get a full year, I was going to have to find a way to download smaller extracts and sew them together. That sounds like a pain, doesn’t it? Well, thanks to a simple Python script, it wasn’t. What I did was download a single csv (comma-separated records) file for different types of trade in the database, which kept the download size within the limit. Then I wrote this basic script …</p>
+<p>CITES allows you to download extracts of its data, but it chokes if you try downloading all records for even a year. So getting the whole database, which dates back several decades, wasn’t going to happen (though I have asked nicely and am told by CITES representatives that they might be able to send me bigger extracts).</p>
+
+<p>I knew that if I wanted to get a full year, I was going to have to find a way to download smaller extracts and sew them together. That sounds like a pain, doesn’t it? Well, thanks to a simple Python script, it wasn’t. What I did was download a single csv (comma-separated records) file for different types of trade in the database, which kept the download size within the limit. Then I wrote this basic script …</p>
+
+<pre><code>	import pandas
+	from pandas import *
+	import numpy
+	 
+	# abbreviate the pandas module for ease of scripting
+	pd = pandas
+	 
+	# read the various csv files as variables
+	# these are the csv files we downloaded one by one
+	# because of the site's download size restrictions
+	 
+	be = pd.read_csv("data/2011compare_be.csv")
+	 
+	ghlm = pd.read_csv("data/2011compare_ghlm.csv")
+	 
+	q = pd.read_csv("data/2011compare_q.csv")
+	 
+	s = pd.read_csv("data/2011compare_s.csv")
+	 
+	z = pd.read_csv("data/2011compare_z.csv")
+	 
+	compare2011 = pd.concat((be, ghlm, s, z), axis=0)
+	 
+	compare2011.to_csv("2011compare.csv")
+	 
+	print "All done!"
+</code></pre>
+
+<p>]… and while I was filling up my water bottle it was stitching together my data. Let’s walk through it step by step.</p>
+
+<p>import pandas
+from pandas import *
+import numpy</p>
+
+<p>This saying “Hey, import these pre-made packages. We’re going to use some of their stuff.” To run this script, you’ve got to have pandas and numpy installed. They are tools that make it easier to do math and data science using Python. They make it easier to do what we do later on.</p>
+
+<p>pd = pandas</p>
+
+<p>All this does is abbreviate pandas to pd. For a script this small, it’s not really necessary. It just makes it faster to write later on, and it’s how I learned it, so I always write it because I’m used to writing “pd” rather than “pandas” later on.</p>
+
+<p>be = pd.read_csv(“data/2011compare_be.csv”)</p>
+
+<p>This is telling the script we’ve got a new variable that we’re going to store some information in. So it says “hey there, we’ve got a new variable called ‘be’ and inside ‘be’ you’re going to store whatever information you get out of the following command. The following command happens to be one called “read_csv” and “read_csv” doesn’t just exist everywhere, it exists within the package known as pandas. That’s why we have to import pandas, and from pandas we have to import everything (the asterisk is a symbol for all in the code above). So, “read_csv” is built to understand a comma-separated file, and all we have to do is tell it where the file is. I repeated this for each of the files.</p>
+
+<p>compare2011 = pd.concat((be, ghlm, s, z), axis=0)</p>
+
+<p>This says “create a new variable and that varialbe will be equal to all the other variables added together”. Concat, in this context, vertically stacks the data because we specified the axis of 0. If we specified an axis of 1, it would append each file as a new set of columns rather than a new set of rows.</p>
+
+<p>compare2011.to_csv(“2011compare.csv”)</p>
+
+<p>Save what we just made as a new csv file.</p>
+
+<p>Once I had the csv of all the records for 2011, I still had a little cleaning to do. The first thing I had to do was aggregate it. I found out the hard way, by screwing it up, that the javascript I was using to visualize the data couldn’t process it correctly if it had multiple enries, like this:</p>
+
+<p>u.s., britain
+u.s., china
+u.s., russia,
+u.s., britain</p>
+
+<p>So I ran a pivot table. Then, I wanted actual county names, rather than the two letter country code, so I had to create a separate table for this, which I downloaded from CITES. I then imported it all into MySQL so that I could do a join and make sure the right full country names were connected to the right country codes. Yes, I could have done this just using the Python language, but I thought it would be a good idea to have my data in a database.</p>
+
+<p>Once I had the aggregate data and the proper file names, I was ready to start the visualization. To learn how to use D3, I downloaded a book (it was free) from the very helpful O’Reilly , called <a href="http://chimera.labs.oreilly.com/books/1230000000345">Interactive Data Visualization For the Web</a>.</p>
+
+<p>I ran through it once and found D3 to be not only one of the most helpful but one of the most intuitive javascript libraries I’ve found. It’s incredibly powerful, and its abilities go way beyond what I’m capable of producing, and its depths are way beyond what I can understand at this point. But, as far as working with data in a browser, creating visualizations and interactivity, D3 makes a lot of sense.</p>
+
+<p>Here’s the full D3 script, which I tried to annotate as best I could. Full disclosure: some of this was borrowed from examples at <a href="http://d3js.org">d3js.org</a>:</p>
+
+<p>If any of it doesn’t make sense but you’d like it to, or you have a problem with some of it you think I should change, let me know. You can contact me through the links at the side of the page.</p>
+
+<p>– <em>Tony</em></p>
+
+<p>Chart dimensions.
+		        var w = 1200,
+		            h = 1000,
+		            r1 = Math.min(650, 650)/2,
+		            r0 = r1 - 20,
+		            format = d3.format(“,.3r”);</p>
+
+<p>Square matrices, asynchronously loaded; exports is the transpose of imports.</p>
+
+<pre><code>	        var imports = [],
+	            exports = [];
+</code></pre>
+
+<p>The chord layout, for computing the angles of chords and groups.
+		        var layout = d3.layout.chord()
+		            .sortGroups(d3.descending)
+		            .sortSubgroups(d3.descending)
+		            .sortChords(d3.descending)
+		            .padding(.025);</p>
+
+<p>The arc generator, for the groups.</p>
+
+<pre><code>	        var arc = d3.svg.arc()
+	            .innerRadius(r0)
+	            .outerRadius(r1);
+</code></pre>
+
+<p>The chord generator (quadratic Bézier), for the chords.</p>
+
+<pre><code>	        var chord = d3.svg.chord()
+	            .radius(r0);
+</code></pre>
+
+<p>Add an SVG element for each diagram, and translate the origin to the center.</p>
+
+<pre><code>	        var svg = d3.selectAll("body").selectAll("section")
+	            
+			.data([imports, exports])
+			.enter().append("div")
+			.style("display", "inline-block")
+			.style("width", w + "px")
+			.style("height", h + "px")
+			.append("svg:svg")
+			.attr("width", w)
+			.attr("height", h)
+			.append("svg:g")
+			.attr("transform", "translate(" + w / 2 + "," + h / 2 + ")");
+</code></pre>
+
+<p>Load our data file. Which, I’m being pretty lazy about just loading from Dropbox:</p>
+
+<pre><code>	        d3.csv("https://dl.dropboxusercontent.com/u/24686053/wildlife_live3.csv", function(data) {
+	          var countries = {},
+	              array = [],
+	              n = 0;
+</code></pre>
+
+<p>Compute a unique id for each country.</p>
+
+<pre><code>	          data.forEach(function(d) {
+	            d.Importer  = country(d.Importer);
+	            d.Exporter = country(d.Exporter);
+	            d.valueOf = value; // convert object to number implicitly
+	          });
+</code></pre>
+
+<p>Initialize a square matrix of imports and exports.</p>
+
+<pre><code>	          for (var i = 0; i &lt; n; i++) {
+	            imports[i] = [];
+	            exports[i] = [];
+	            for (var j = 0; j &lt; n; j++) {
+	              imports[i][j] = 0;
+	              exports[i][j] = 0;
+	            }
+	          }
+</code></pre>
+
+<p>Populate the matrices, and stash a map from id to country.</p>
+
+<pre><code>	          data.forEach(function(d) {
+	            imports[d.Exporter.id][d.Importer.id] = d;
+	            exports[d.Importer.id][d.Exporter.id] = d;
+	            array[d.Exporter.id] = d.Exporter;
+	            array[d.Importer.id] = d.Importer;
+	          });
+</code></pre>
+
+<p>For each diagram…</p>
+
+<pre><code>	          svg.each(function(matrix, j) {
+	            var svg = d3.select(this);
+</code></pre>
+
+<p>Compute the chord layout.</p>
+
+<pre><code>	            layout.matrix(matrix);
+	 
+	            svg.insert("text")
+	                .text(function(d) { return (j ? "Imports " : "Exports "); })
+	                .attr("class", "splainerhead")
+	                .attr("x", -450 + "px")
+	                .attr("y", -450 + "px")
+</code></pre>
+
+<p>Add the chords to the svg:</p>
+
+<pre><code>	            svg.selectAll("path.chord")
+	                .data(layout.chords)
+	              .enter().append("svg:path")
+	                .attr("class", "chord")
+	                .style("fill", function(d) { return fill(d.source.value); })
+	                .style("stroke", function(d) { return fill(d.source.value); })
+	                .attr("d", chord)
+	                .append("svg:title")
+	                .text(function(d) { return format(d.source.value) + " live animals " + "from " + d.source.value.Exporter.name + " to " + d.source.value.Importer.name; })
+</code></pre>
+
+<p>Add groups.
+		            var g = svg.selectAll(“g.group”)
+		                .data(layout.groups)
+		                .enter().append(“svg:g”)
+		                .attr(“class”, “group”)
+		                .style(“cursor”, “pointer”)
+		                .on(“click”, fade(.01))
+		                .on(“dblclick”, fade(1))</p>
+
+<p>Add the group arc.
+		            g.append(“svg:path”)
+		                .style(“fill”, “#333”)
+		                .attr(“id”, function(d, i) { return “group” + d.index + “-“ + j; })
+		                .attr(“d”, arc)
+		                .append(“svg:title”)
+		                .text(function(d) { return array[d.index].name + “ “ + (j ? “imported “ : “reportedly exported “) + format(d.value) + “ live animals in 2011”; })</p>
+
+<p>Add tick marks and labels for each country:</p>
+
+<pre><code>	            var ticks = svg.append("g")
+	              .selectAll("g")
+	              .data(layout.groups)
+	              .enter().append("g")
+	 
+	            ticks.append("text")
+	                .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
+	                .attr("dy", ".35em")
+	                .attr("text-anchor", function(d) { return d.angle &gt; Math.PI ? "end" : null; })
+	                .attr("transform", function(d) {
+	                  return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
+	                      + "translate(" + (r0 + 45) + ")"
+	                      + (d.angle &gt; Math.PI ? "rotate(180)" : "");
+	                })
+	                .text(function(d) { return array[d.index].name; })
+	                .style("font-size", "10px")
+	                .style("font-family", "Verdana")
+	                .style("padding", "2px")
+	                .style("cursor", "pointer")
+	                .on("click", fade(.01))
+	                .on("dblclick", fade(1)) 
+</code></pre>
+
+<p>Create a function to fade out the arc,  to be applied to all countries except for the one selected.</p>
+
+<pre><code>	        function fade(opacity) {
+	          return function(g, i) {
+	                  svg.selectAll("path.chord")
+	                      .filter(function(d) {
+	                        return d.source.index != i &amp;&amp; d.target.index != i;
+	                      })
+	                    .transition(30)
+	                      .style("opacity", opacity);
+	                }
+	        }
+</code></pre>
+
+<p>Add the label, and on it apply a mouseover and mou
+		            g.append(“svg:text”)
+		               // .attr(“x”, 0)
+		               // .attr(“dy”, 0)
+		               // .append(“svg:textPath”)
+		               // .attr(“xlink:href”, function(d) { return “#group” + d.index + “-“ + j; })
+		               // .text(function(d) { return array[d.index].name; })
+		               // .on(“mouseover”, fade(.1))
+		               // .on(“mouseout”, fade(1));
+		            });</p>
+
+<p>Memorize the specified country, computing a unique id.</p>
+
+<pre><code>	            function country(d) {
+	              return countries[d] || (countries[d] = {
+	                name: d,
+	                id: n++
+	              });
+	            }
+	 
+	 
+	            function value() {
+	              return +this.Quantity;
+	            }
+	 
+	        });
+</code></pre>
 
 
   </article>
