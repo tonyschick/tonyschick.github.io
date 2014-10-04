@@ -5,6 +5,8 @@ date:   2013-10-10 12:19:00
 categories: jekyll update
 ---
 
+<iframe frameborder="0" scrolling="no" width="100%" height="640" src="http://a.tiles.mapbox.com/v3/tonyschick.road-trip/page.html#4/40.25/-88.95"></iframe>
+
 One of the main tasks within a project I’ve been working that I’ve dubbed “Poorly Defined” -- a year-long writing fellowship covering poverty funded by the Missouri School of Journalism -- is using data that’s compiled on “living wages” to create a rate that can be compared to the official poverty rate. Most people look at the official poverty thresholds, which haven’t been updated in nearly 50 years, and struggle to understand how a single person could get by on $TK, let alone how a single parent of 3 could get by on $TK in New York City (For a great simplified explanation of this, check out this brief story from a recent episode of NPR’s Planet Money).
 
 In recent years, nonprofit groups, sociologists and economists have been developing new thresholds that better estimate the cost of living in the U.S., that include work-related expenses and child care, and that -- perhaps most significantly -- adjust for geographic differences in cost of living. Efforts include the Self-Sufficiency Standard from researchers at the University of Washington, the Family Budget Calculator from the Economic Policy Institute, Basic Economic Security Tables from Wider Opportunities for Women and The Living Wage Calculator from the Massachusetts Institute of Technology.
