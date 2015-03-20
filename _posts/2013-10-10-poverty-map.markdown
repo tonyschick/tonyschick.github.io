@@ -57,7 +57,7 @@ What happened? Well, Oconee County has a relatively low poverty rate but it's su
 
 So, that wasn’t going to work. 
 
-Mapping, then, was the best way for me to understand the data spatially. Using Quantum GIS, TileMill and Mapbox, [I created this map](http://a.tiles.mapbox.com/v3/tonyschick.road-trip/page.html#4/40.25/-88.95), a “chloropeth” map shaded by the rate of people below the living wage threshold. You can see clusters of high disparity in urban areas like New York, Chicago, Atlanta, the San Francisco-Oakland Bay Area and Los Angeles, all of which have a newly calculated rate more than 20 percentage points higher than the official poverty rate. 
+Mapping, then, was the best way for me to understand the data spatially. Using Quantum GIS, TileMill and Mapbox, [I created this map](http://a.tiles.mapbox.com/v3/tonyschick.road-trip/page.html#4/40.25/-88.95), shaded by the rate of people below the living wage threshold. You can see clusters of high disparity in urban areas like New York, Chicago, Atlanta, the San Francisco-Oakland Bay Area and Los Angeles, all of which have a newly calculated rate more than 20 percentage points higher than the official poverty rate. 
 
 The next step is reviewing the map with editors to determine the best places for on-the-ground reporting.
 
