@@ -4,11 +4,11 @@ title: about
 permalink: /about/
 ---
 
-Tony is a journalist on the EarthFix team at [Oregon Public Broadcasting](http://www.opb.org). Before that he worked for [Investigative Reporters and Editors](http://ire.org), a nonprofit that trains journalists to use investigative and data-mining techniques.
+I'm a journalist on the EarthFix team at [Oregon Public Broadcasting](http://www.opb.org). Before that I worked for [Investigative Reporters and Editors](http://ire.org), a nonprofit that trains journalists to use investigative and data-mining techniques.
 
-He lives in Portland, Ore., with his wife, Liz, and their dog, Myron.
+I live in Portland, Ore., with my wife and two dogs.
 
-He's done freelance journalism and research since 2007. If you're interested in working with him, email him at schick dot anthony at gmail.com.
+I've been freelancing in journalism, research and data analysis since 2007. You can reach me at schick.anthony at gmail.
 
 [public key](http://pgp.mit.edu/pks/lookup?op=get&search=0xE3A41916D23BA9B1)
 
