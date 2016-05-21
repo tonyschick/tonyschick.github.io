@@ -17,4 +17,4 @@ Run it from the command line, give it the url slug for your request, and go do s
 
 I've tried it on a few of our past big requests, and it's worked well.
 
-If you try and and spot any problems, let me know.
+If you try it and spot any problems, let me know.
