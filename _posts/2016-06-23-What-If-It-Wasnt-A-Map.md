@@ -21,7 +21,7 @@ The dataset is maintained by the Electronics Recycling Coordination Clearinghous
 
 The ERCC keeps it maps. Here's what they look like. It's hard to figure it out exactly what they show without some further investigation.
 
-![ERCC screenshot]({{ site.url }}/images/ercc-screenshot.png)
+![ERCC screenshot]({{ site.url }}/imgs/ercc-screenshot.png)
 
 The graphic was meant to show how, in the absence of federal law, a patchwork of laws across the country developed that is rife with gaps and inconsistencies. Then it hit us: We could actually make a patchwork.
 
