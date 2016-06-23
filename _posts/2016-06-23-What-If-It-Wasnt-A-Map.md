@@ -21,10 +21,10 @@ The dataset is maintained by the Electronics Recycling Coordination Clearinghous
 
 The ERCC keeps it maps. Here's what they look like. It's hard to figure it out exactly what they show without some further investigation.
 
-![ERCC screenshot]({{ site.url }}/imgs/ercc-screenshot.png)
+<img src="/imgs/ercc-screnshot.png"
 
 The graphic was meant to show how, in the absence of federal law, a patchwork of laws across the country developed that is rife with gaps and inconsistencies. Then it hit us: We could actually make a patchwork.
 
 Rather than a map, we could create a table — more like a bingo card — of what states regulated what. Simple, yet effective. It ran within stories and [on its own](http://www.opb.org/news/widget/the-patchwork-of-e-waste-laws-in-the-united-states/) at on our site.
 
-<iframe src="http://opb-news-interactives.s3.amazonaws.com/news/2016/04April/EwasteRegs/index.html" frameBorder="0" scrolling="no" />
+<iframe style="width: 100%; height: 800px;" src="http://opb-news-interactives.s3.amazonaws.com/news/2016/04April/EwasteRegs/index.html" frameBorder="0" scrolling="no" />
