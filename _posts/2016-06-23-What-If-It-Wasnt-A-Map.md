@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What if it wasn't a map"
-date:   2016-06-23 12:05:00
+date:   2016-06-22 21:05:00
 categories: maps data
 ---
 
