@@ -8,7 +8,7 @@
     </div>
 
     <div class="row">
-    
+
         {% if site.github_username %}<p>
           <a href="https://github.com/{{ site.github_username }}">
             <span class="icon github">
@@ -48,7 +48,9 @@
 
         <div class="trigger">
         {% for page in site.pages %}
-          {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">- {{ page.title|lower }}</a>{% endif %}
+          <div class="row">
+            {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">- {{ page.title|lower }}</a>{% endif %}
+          </div>
         {% endfor %}
         </div>
       </div>
