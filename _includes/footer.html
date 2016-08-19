@@ -46,14 +46,14 @@
           </a>
         </p>{% endif %}
 
-        <!-- <div class="trigger"> -->
+        <div class="trigger">
         {% for page in site.pages %}
           <div class="row">
             {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">- {{ page.title|lower }}</a>{% endif %}
           </div>
         {% endfor %}
         </div>
-      <!-- </div> -->
+      </div>
       <div class="row">
         <span style="color: #ccc;"><a href="{{ site.public_key }}">- public key</a></span></class></p>
       </div>
