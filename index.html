@@ -2,8 +2,8 @@
 layout: default
 ---
 
-  <h1>recent posts</h1>
   <ul class="posts">
+    <h3>recent posts</h3>
     {% for post in site.posts %}
       <li>
         <span class="post-date">{{ post.date | date: "%b. %Y" }}</span>
