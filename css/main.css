@@ -6,7 +6,10 @@
   padding: 0;
 }
 
-html, body {  }
+html, body {
+
+height: 95%;
+ }
 
 body {
   margin-top: 5%;
