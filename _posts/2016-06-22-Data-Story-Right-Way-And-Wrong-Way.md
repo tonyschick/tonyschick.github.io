@@ -11,7 +11,7 @@ They were interested in workflow. I've become a bit obsessive about finding good
 
 I don't work on a data team. This is not a rare case. I'm the only person on my team that uses data with any regularity and the only one who writes code. We don't have a data editor who scrutinizes my steps. Everything I do has to be exacting. I have to catch the mistakes, because no one else will.
 
-An answer to that, learned through several NICARs, is to have a rock-solid and reproducible methodology.
+An answer to that, learned through several trips to [NICAR](https://www.ire.org/nicar/), is to have a rock-solid and reproducible methodology.
 
 In the ideal, everything is documented and reproducible. Every piece of the process -- every sort, calculation, renaming of columns or trim of trailing spaces. The code to achieve it is published and the reason for it is documented.
 
